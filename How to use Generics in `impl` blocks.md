@@ -86,7 +86,7 @@ impl<T> MyVec<T> {
 In the above `impl` block we have created two methods, both generic over `F`. Type of closure (`F`) for both these methods is different as `FnMut` signature
 for both differs, but even if both `F` generics in methods `retain` and `retain_mut` had the exact same trait bound, even then there concrete type
 could have been different, assuming both of them satisfied their trait bounds.
-At the same time, `&T` ( for `retain`'s closure ) and `&mut T` ( for `retain_mut`'s closure ), both will be references to the same concrete type T, which is derived at compile time.
+At the same time, `&T` ( for `retain`'s closure ) and `&mut T` ( for `retain_mut`'s closure ), both will be references to the same concrete type `T`.
 
 Read [Summary (tldr) again](https://github.com/PreetamSing/rust_articles/blob/main/How%20to%20use%20Generics%20in%20%60impl%60%20blocks.md#tldr)
 
