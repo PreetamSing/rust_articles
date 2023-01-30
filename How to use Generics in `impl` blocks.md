@@ -38,7 +38,7 @@ fn main() {
   let _ = dbg!(res); // res = MyVec([2, 3, 4, 5])
 }
 ```
-In this `impl` declaration we take one generic param `T` i.e. `impl<T> ...` and pass it to `MyVec` i.e. `... for MyVec<T> {`, and let generic param of `Add` default to `Self` by not passing it. This puts a restriction that we can only add `MyVec` to itself, but practically we should be able to add any homogeneous collection of `T` type items to it, e.g. `Vec<T>`, `&[T]`. It's time to use our `Rhs` generic parameter.
+In this `impl` declaration we take one generic param `T`, in form of `impl<T> ...`, and pass it to `MyVec`, in form of `... for MyVec<T> {`, and let generic param of `Add` default to `Self` by not passing it. This puts a restriction that we can only add `MyVec` to itself, but practically we should be able to add any homogeneous collection of `T` type items to it, e.g. `Vec<T>`, `&[T]`. It's time to use our `Rhs` generic parameter.
 ```rust
 use std::ops::Add;
 
